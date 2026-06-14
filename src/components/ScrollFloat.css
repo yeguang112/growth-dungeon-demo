@@ -1,0 +1,43 @@
+.scroll-float {
+  margin: 0;
+  color: var(--ink-strong);
+  font-family: var(--display);
+  font-size: clamp(2.55rem, 6.8vw, 6.6rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.072em;
+}
+
+.scroll-float span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(34px) rotateX(42deg);
+  transform-origin: 50% 80%;
+  transition:
+    opacity 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+}
+
+.scroll-float.is-visible span {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) rotateX(0);
+}
+
+.scroll-float.compact {
+  font-size: clamp(2.2rem, 4.6vw, 4.75rem);
+  letter-spacing: -0.06em;
+}
+
+@media (max-width: 680px) {
+  .scroll-float {
+    font-size: clamp(2.4rem, 13vw, 4.3rem);
+  }
+
+  .scroll-float.compact {
+    font-size: clamp(2rem, 10vw, 3.4rem);
+  }
+}

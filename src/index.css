@@ -1,23 +1,21 @@
 :root {
-  --display: 'Arial Black', 'Impact', 'Noto Serif SC', 'Microsoft YaHei', serif;
-  --body: 'Aptos', 'Segoe UI', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
-  --bg: #07101d;
-  --bg-deep: #030812;
-  --ink-strong: #f5fbff;
-  --ink: #dbeafe;
-  --muted: #8ba4bd;
-  --line: rgba(177, 225, 255, 0.14);
-  --neon: #86efac;
-  --cyan: #67e8f9;
-  --gold: #fbcd65;
-  --danger: #fb7185;
-  --shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
+  --display: 'YouSheBiaoTiHei', 'TsangerJinKai03', 'Songti SC', 'STSong', 'Microsoft YaHei', serif;
+  --body: 'HarmonyOS Sans SC', 'MiSans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --bg: #0c0d12;
+  --bg-soft: #12151d;
+  --cream: #fff7e8;
+  --ink-strong: #fff7e8;
+  --ink: #e7dcc8;
+  --muted: rgba(231, 220, 200, 0.62);
+  --line: rgba(255, 247, 232, 0.14);
+  --gold: #f5d17a;
+  --mint: #b7f4df;
+  --ember: #fb7a5b;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 12%, rgba(103, 232, 249, 0.16), transparent 28%),
-    radial-gradient(circle at 84% 8%, rgba(134, 239, 172, 0.14), transparent 30%),
-    radial-gradient(circle at 70% 76%, rgba(251, 205, 101, 0.11), transparent 32%),
-    linear-gradient(180deg, #07101d 0%, #081221 46%, #030812 100%);
+    radial-gradient(circle at 18% 16%, rgba(245, 209, 122, 0.15), transparent 28%),
+    radial-gradient(circle at 80% 12%, rgba(183, 244, 223, 0.12), transparent 28%),
+    linear-gradient(135deg, #0c0d12 0%, #12151d 52%, #090a0f 100%);
   font-family: var(--body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,29 +35,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background-image:
-    linear-gradient(rgba(177, 225, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(177, 225, 255, 0.045) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.86), transparent 78%);
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    linear-gradient(120deg, transparent 0 34%, rgba(134, 239, 172, 0.055) 34% 35%, transparent 35% 100%),
-    linear-gradient(60deg, transparent 0 68%, rgba(103, 232, 249, 0.05) 68% 69%, transparent 69% 100%);
 }
 
 a {
@@ -83,6 +58,6 @@ button {
 }
 
 ::selection {
-  background: rgba(134, 239, 172, 0.34);
-  color: var(--ink-strong);
+  background: rgba(245, 209, 122, 0.34);
+  color: var(--cream);
 }

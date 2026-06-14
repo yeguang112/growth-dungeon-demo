@@ -1,0 +1,28 @@
+.shiny-text {
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(
+    var(--shine-spread),
+    var(--shine-color) 0%,
+    var(--shine-color) 35%,
+    var(--shine-highlight) 50%,
+    var(--shine-color) 65%,
+    var(--shine-color) 100%
+  );
+  background-size: 220% auto;
+  background-position: 150% center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyText var(--shine-speed) linear var(--shine-delay) infinite;
+}
+
+.shiny-text.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+@keyframes shinyText {
+  to {
+    background-position: -70% center;
+  }
+}

@@ -1,0 +1,83 @@
+.target-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  opacity: 0.72;
+  mix-blend-mode: screen;
+  transition:
+    opacity 160ms ease,
+    scale 160ms ease;
+}
+
+.target-cursor::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff7e8;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 18px rgba(245, 209, 122, 0.82);
+}
+
+.target-cursor .corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #fff7e8;
+  border-style: solid;
+  border-width: 2px;
+  opacity: 0.9;
+}
+
+.target-cursor .corner-tl {
+  left: 0;
+  top: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.target-cursor .corner-tr {
+  right: 0;
+  top: 0;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.target-cursor .corner-br {
+  right: 0;
+  bottom: 0;
+  border-left: 0;
+  border-top: 0;
+}
+
+.target-cursor .corner-bl {
+  left: 0;
+  bottom: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.target-cursor.is-targeting {
+  opacity: 1;
+}
+
+.target-cursor.is-targeting::after {
+  opacity: 0;
+}
+
+.target-cursor.is-pressing {
+  scale: 0.92;
+}
+
+@media (pointer: coarse), (max-width: 760px) {
+  .target-cursor {
+    display: none;
+  }
+}

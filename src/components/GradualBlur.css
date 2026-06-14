@@ -1,0 +1,22 @@
+.gradual-blur {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: 130px;
+  pointer-events: none;
+}
+
+.gradual-blur-top {
+  top: 0;
+  background: linear-gradient(180deg, rgba(12, 13, 18, 0.82), rgba(12, 13, 18, 0.28), transparent);
+  backdrop-filter: blur(10px);
+  mask-image: linear-gradient(180deg, black 0%, transparent 100%);
+}
+
+.gradual-blur-bottom {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(12, 13, 18, 0.72), rgba(12, 13, 18, 0.16), transparent);
+  backdrop-filter: blur(9px);
+  mask-image: linear-gradient(0deg, black 0%, transparent 100%);
+}
